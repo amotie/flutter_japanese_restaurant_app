@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_japanese_restaurant_app/core/app_extension.dart';
-import 'package:flutter_japanese_restaurant_app/src/view/widget/custom_page_route.dart';
-import 'package:get/get.dart';
+import 'package:flutter_japanese_restaurant_app/src/business_logic/blocs/theme/theme_bloc.dart';
 import '../../../core/app_color.dart';
 import '../../../core/app_style.dart';
-import '../../controller/food_controller.dart';
-import '../../model/food.dart';
+import '../../data/model/food.dart';
+import '../widget/custom_page_route.dart';
 import '../screen/food_detail_screen.dart';
-
-final FoodController controller = Get.put(FoodController());
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class FoodListView extends StatelessWidget {
   const FoodListView(
@@ -42,7 +40,7 @@ class FoodListView extends StatelessWidget {
               width: 160,
               padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
-                  color: controller.isLightTheme
+                  color: context.read<ThemeBloc>().isLightTheme
                       ? Colors.white
                       : DarkThemeColor.primaryLight,
                   borderRadius: const BorderRadius.all(Radius.circular(20))),
@@ -55,13 +53,17 @@ class FoodListView extends StatelessWidget {
                       food.image,
                       scale: 6,
                     ),
-                    Text("\$${food.price}",
-                        style: h3Style.copyWith(color: LightThemeColor.accent)),
-                    Text(food.name,
-                        style: Theme.of(context)
-                            .textTheme
-                            .headline4
-                            ?.copyWith(fontWeight: FontWeight.bold)),
+                    Text(
+                      "\$${food.price}",
+                      style: h3Style.copyWith(color: LightThemeColor.accent),
+                    ),
+                    Text(
+                      food.name,
+                      style: Theme.of(context)
+                          .textTheme
+                          .headline4
+                          ?.copyWith(fontWeight: FontWeight.bold),
+                    ),
                   ],
                 ).fadeAnimation(0.7),
               ),

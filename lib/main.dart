@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_japanese_restaurant_app/src/controller/food_controller.dart';
-import 'package:flutter_japanese_restaurant_app/src/view/screen/home_screen.dart';
-import 'package:get/get.dart';
+import 'package:flutter_japanese_restaurant_app/src/business_logic/blocs/category/category_bloc.dart';
+import 'package:flutter_japanese_restaurant_app/src/business_logic/blocs/food/food_bloc.dart';
+import 'package:flutter_japanese_restaurant_app/src/business_logic/blocs/theme/theme_bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_japanese_restaurant_app/src/data/repository/repository.dart';
 
-final FoodController controller = Get.put(FoodController());
+import 'package:flutter_japanese_restaurant_app/src/presentation/screen/welcome_screen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -12,12 +14,32 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Obx(() {
-      return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: controller.theme.value,
-        home: HomeScreen(),
-      );
-    });
+    return RepositoryProvider<Repository>(
+      create: (context) => Repository(),
+      child: MultiBlocProvider(
+        providers: [
+          BlocProvider<FoodBloc>(
+            create: (context) =>
+                FoodBloc(repository: context.read<Repository>()),
+          ),
+          BlocProvider<CategoryBloc>(
+            create: (context) =>
+                CategoryBloc(repository: context.read<Repository>()),
+          ),
+          BlocProvider<ThemeBloc>(
+            create: (context) => ThemeBloc(),
+          ),
+        ],
+        child: BlocBuilder<ThemeBloc, ThemeState>(
+          builder: (context, state) {
+            return MaterialApp(
+              debugShowCheckedModeBanner: false,
+              theme: state.theme,
+              home: WelcomeScreen(),
+            );
+          },
+        ),
+      ),
+    );
   }
 }

@@ -19,7 +19,7 @@ class _ScaleAnimationState extends State<ScaleAnimation>
     super.initState();
 
     _controller = AnimationController(
-        duration: const Duration(seconds: 2),
+        duration: const Duration(milliseconds: 100),
         vsync: this,
         value: 0,
         lowerBound: 0,

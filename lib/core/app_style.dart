@@ -19,7 +19,7 @@ const bodyTextLight =
     TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: Colors.black45);
 
 const subtitleLight =
-    TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.black45);
+    TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.black45);
 
 final textFieldStyle = OutlineInputBorder(
   borderRadius: BorderRadius.circular(25),

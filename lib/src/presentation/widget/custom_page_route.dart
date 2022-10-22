@@ -6,7 +6,7 @@ class CustomPageRoute extends PageRouteBuilder {
           pageBuilder: (context, Animation<double> animation,
                   Animation<double> secondaryAnimation) =>
               child,
-          transitionDuration: const Duration(milliseconds: 500),
+          transitionDuration: const Duration(milliseconds: 200),
         );
 
   Widget child;

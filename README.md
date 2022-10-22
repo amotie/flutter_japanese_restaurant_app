@@ -1,27 +1,29 @@
 # flutter_japanese_restaurant_app
 
 <p align="center">
-  <img src="https://img.shields.io/github/workflow/status/SinaSys/flutter_japanese_restaurant_app/Build%20&%20Release/master?label=CI&logo=github">
+  <img src="https://img.shields.io/github/workflow/status/SinaSys/flutter_japanese_restaurant_app/Analysis%20&%20Build/bloc?label=CI&logo=github">
   <img src="https://img.shields.io/github/v/release/SinaSys/flutter_japanese_restaurant_app?label=Release&logo=semantic-release">
-  <img src="https://img.shields.io/github/last-commit/SinaSys/flutter_japanese_restaurant_app?label=Last%20commit">
+  <img src="https://img.shields.io/github/last-commit/SinaSys/flutter_japanese_restaurant_app/bloc?label=Last%20commit">
 </p>
 
-Japanese restaurant app is a design implementation of [Japanese restaurant app](https://dribbble.com/shots/14752424-Japan-Restaurant-App-Food-App/attachments/6455673?mode=media) designed by [gandkurniawan](https://dribbble.com/gandkurniawan)
+
+Japanese restaurant app is a design implementation
+of [Japanese restaurant app](https://dribbble.com/shots/14752424-Japan-Restaurant-App-Food-App/attachments/6455673?mode=media)
+designed by [gandkurniawan](https://dribbble.com/gandkurniawan)
 
 ![](https://github.com/SinaSys/flutter_japanese_restaurant_app/blob/master/screenshots/japanese_restaurant_app_dark.png?raw=true)
 ![](https://github.com/SinaSys/flutter_japanese_restaurant_app/blob/master/screenshots/japanese_restaurant_app_light.png?raw=true)
 
 
 
-
   <br/>
 
-## GetX | Provider | Cubit | Bloc
-There are four different implementations: 1: Provider version, 2: Cubit version, 3: Bloc version, 4: GetX version <br/>
+## Bloc | Cubit | GetX | Provider
+There are four different implementations: 1: Cubit version, 2: Bloc version, 3: GetX version, 4: Provider version <br/>
+• You can access Bloc version from ```bloc branch``` [(here)](https://github.com/SinaSys/flutter_japanese_restaurant_app/tree/bloc) <br/>
+• You can access Cubit version from ```cubit branch``` [(here)](https://github.com/SinaSys/flutter_japanese_restaurant_app/tree/cubit) <br/>
 • You can access GetX version from ```master branch``` [(here)](https://github.com/SinaSys/flutter_japanese_restaurant_app/tree/master) <br/>
 • You can access Provider version from ```provider branch``` [(here)](https://github.com/SinaSys/flutter_japanese_restaurant_app/tree/provider) <br/>
-• You can access Cubit version from ```cubit branch``` [(here)](https://github.com/SinaSys/flutter_japanese_restaurant_app/tree/cubit) <br/>
-• You can access Bloc version from ```bloc branch``` [(here)](https://github.com/SinaSys/flutter_japanese_restaurant_app/tree/bloc) <br/>
 
  <br/>
 
@@ -37,8 +39,8 @@ Favorite screen            |   Home screen             |  Food Detail Screen    
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
 ![](https://github.com/SinaSys/flutter_japanese_restaurant_app/blob/master/screenshots/favorite_screen_dark.png?raw=true)|![](https://github.com/SinaSys/flutter_japanese_restaurant_app/blob/master/screenshots/food_list_screen_dark.png?raw=true)|![](https://github.com/SinaSys/flutter_japanese_restaurant_app/blob/master/screenshots/food_detail_screen_dark.png?raw=true)|![](https://github.com/SinaSys/flutter_japanese_restaurant_app/blob/master/screenshots/cart_screen_dark.png?raw=true)
 
-
 ## 🚀 Features :
+
 ```
 • Dynamically change between light and dark theme
 • Bottom navigation animation when switch from one screen to another
@@ -52,99 +54,7 @@ Favorite screen            |   Home screen             |  Food Detail Screen    
 • Add desired food to the favorite screen
 • Select quantity for each item on detail screen
 • Filter foods by category
-• State management with GetX | Cubit | Bloc | Provider
-```
-
-
-
-## Directory Structure (GetX version)
-```
-📂lib
- │───main.dart  
- │───📂core  
- |   │──app_asset.dart
- |   │──app_color.dart
- |   │──app_data.dart
- |   │──app_icon.dart
- |   │──app_style.dart
- |   │──app_theme.dart
- |   └──app_extension.dart
- └───📂src
-     │────📂model
-     │    │──bottom_navigation_item.dart
-     |    │──food.dart
-     |    └──food_category.dart
-     └────📂view
-     |    │───📂screen
-     |    |   |──cart_screen.dart
-     |    |   |──favorite_screen.dart
-     |    |   |──food_detail_screen.dart
-     |    |   |──food_list_screen.dart
-     |    |   |──home_screen.dart
-     |    |   └──profile_screen.dart
-     |    │───📂widget
-     │    |   |──counter_button.dart
-     │    |   |──custom_page_route.dart
-     │    |   |──empty_widget.dart
-     │    |   |──fade_animation.dart
-     │    |   |──food_list_view.dart
-     │    |   |──page_transition.dart
-     |    |   └──scale_animation.dart
-     └────📂controller
-          └──food_controller.dart
-```
-
-
-
-## Directory Structure (Provider version)
-
-```
-📂lib
- │───main.dart  
- │───📂core  
- │   │──app_asset.dart
- │   │──app_color.dart
- │   │──app_data.dart
- │   │──app_icon.dart
- │   │──app_style.dart
- │   │──app_theme.dart
- │   └──app_extension.dart
- └───📂src
-     │────📂data
-     │    │───📂model
-     │    │   |──bottom_navigation_item.dart
-     │    │   |──food.dart
-     │    │   └──food_category.dart
-     │    │───📂repository
-     │    │   └──repository.dart
-     └────📂presentation
-     │    │───📂screen
-     │    │   |──cart_screen.dart
-     │    │   |──favorite_screen.dart
-     │    │   |──food_detail_screen.dart
-     │    │   |──food_list_screen.dart
-     │    │   |──home_screen.dart
-     │    │   └──profile_screen.dart
-     │    │───📂widget
-     │    │   |──counter_button.dart
-     │    │   |──custom_page_route.dart
-     │    │   |──empty_widget.dart
-     │    │   └──food_list_view.dart
-     │    │───📂animation
-     │    │   |──fade_animation.dart
-     │    │   |──page_transition.dart
-     │    │   └──scale_animation.dart
-     └────📂business_logic
-          └───📂provider
-              │───📂food
-              │   |──food_provider.dart
-              │   └──food_state.dart
-              └───📂category
-              │    |──category_provider.dart
-              │    └──category_state.dart
-              └───📂theme
-                   |──theme_provider.dart
-                   └──theme_state.dart
+• State management with Bloc | Cubit | GetX | Provider
 ```
 
 
@@ -204,6 +114,7 @@ Favorite screen            |   Home screen             |  Food Detail Screen    
 
 
 ## Directory Structure (Cubit version)
+
 ```
 📂lib
  │───main.dart  
@@ -254,9 +165,101 @@ Favorite screen            |   Home screen             |  Food Detail Screen    
 ```
 
 
-## Pull Requests
-I welcome and encourage all pull requests. It usually will take me within 48-72 hours to respond to any issue or request.
+## Directory Structure (GetX version)
 
+```
+📂lib
+ │───main.dart  
+ │───📂core  
+ |   │──app_asset.dart
+ |   │──app_color.dart
+ |   │──app_data.dart
+ |   │──app_icon.dart
+ |   │──app_style.dart
+ |   │──app_theme.dart
+ |   └──app_extension.dart
+ └───📂src
+     │────📂model
+     │    │──bottom_navigation_item.dart
+     |    │──food.dart
+     |    └──food_category.dart
+     └────📂view
+     |    │───📂screen
+     |    |   |──cart_screen.dart
+     |    |   |──favorite_screen.dart
+     |    |   |──food_detail_screen.dart
+     |    |   |──food_list_screen.dart
+     |    |   |──home_screen.dart
+     |    |   └──profile_screen.dart
+     |    │───📂widget
+     │    |   |──counter_button.dart
+     │    |   |──custom_page_route.dart
+     │    |   |──empty_widget.dart
+     │    |   |──fade_animation.dart
+     │    |   |──food_list_view.dart
+     │    |   |──page_transition.dart
+     |    |   └──scale_animation.dart
+     └────📂controller
+          └──food_controller.dart
+```
+
+
+## Directory Structure (Provider version)
+
+```
+📂lib
+ │───main.dart  
+ │───📂core  
+ │   │──app_asset.dart
+ │   │──app_color.dart
+ │   │──app_data.dart
+ │   │──app_icon.dart
+ │   │──app_style.dart
+ │   │──app_theme.dart
+ │   └──app_extension.dart
+ └───📂src
+     │────📂data
+     │    │───📂model
+     │    │   |──bottom_navigation_item.dart
+     │    │   |──food.dart
+     │    │   └──food_category.dart
+     │    │───📂repository
+     │    │   └──repository.dart
+     └────📂presentation
+     │    │───📂screen
+     │    │   |──cart_screen.dart
+     │    │   |──favorite_screen.dart
+     │    │   |──food_detail_screen.dart
+     │    │   |──food_list_screen.dart
+     │    │   |──home_screen.dart
+     │    │   └──profile_screen.dart
+     │    │───📂widget
+     │    │   |──counter_button.dart
+     │    │   |──custom_page_route.dart
+     │    │   |──empty_widget.dart
+     │    │   └──food_list_view.dart
+     │    │───📂animation
+     │    │   |──fade_animation.dart
+     │    │   |──page_transition.dart
+     │    │   └──scale_animation.dart
+     └────📂business_logic
+          └───📂provider
+              │───📂food
+              │   |──food_provider.dart
+              │   └──food_state.dart
+              └───📂category
+              │    |──category_provider.dart
+              │    └──category_state.dart
+              └───📂theme
+                   |──theme_provider.dart
+                   └──theme_state.dart
+```
+
+
+## Pull Requests
+
+I welcome and encourage all pull requests. It usually will take me within 48-72 hours to respond to
+any issue or request.
 
   <br/>
 
@@ -278,11 +281,10 @@ I welcome and encourage all pull requests. It usually will take me within 48-72 
 
 ## Created & Maintained By
 
-[SinaSys](https://github.com/SinaSys) 
-
-
+[SinaSys](https://github.com/SinaSys)
 
 ## My other flutter projects
+
 project        |
 :-------------------------|
 |[Office furniture store app](https://github.com/SinaSys/flutter_office_furniture_store_app)
