@@ -46,8 +46,7 @@ class FoodBloc extends Bloc<FoodEvent, FoodState> {
       }
       return element;
     }).toList();
-    print("INDEX IN BLOC: " + event.index.toString());
-  
+    
     emit(FoodState(foodList: foodList));
   }
 

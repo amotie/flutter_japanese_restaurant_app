@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_japanese_restaurant_app/core/app_asset.dart';
-import 'package:flutter_japanese_restaurant_app/core/app_data.dart';
 import 'package:flutter_japanese_restaurant_app/src/presentation/screen/home_screen.dart';
 import 'package:flutter_japanese_restaurant_app/src/presentation/widget/custom_page_route.dart';
 
@@ -23,7 +22,7 @@ class WelcomeScreen extends StatelessWidget {
               width: 300,
               height: 300,
             ),
-            SizedBox(
+         const   SizedBox(
               height: 100,
             ),
             Center(
@@ -35,7 +34,7 @@ class WelcomeScreen extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
             ),
-            SizedBox(
+        const    SizedBox(
               height: 15,
             ),
             Text(
@@ -46,7 +45,7 @@ class WelcomeScreen extends StatelessWidget {
                   ),
               textAlign: TextAlign.center,
             ),
-            SizedBox(
+      const      SizedBox(
               height: 50,
             ),
             ElevatedButton(
@@ -64,10 +63,10 @@ class WelcomeScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(40),
                   ),
                 ),
-                fixedSize: MaterialStateProperty.all(Size(400, 80)),
+                fixedSize: MaterialStateProperty.all(const Size(400, 80)),
               ),
-              child: Padding(
-                padding: const EdgeInsets.all(20),
+              child:const Padding(
+                padding:  EdgeInsets.all(20),
                 child: Text(
                   'Lets Start',
                   style: TextStyle(

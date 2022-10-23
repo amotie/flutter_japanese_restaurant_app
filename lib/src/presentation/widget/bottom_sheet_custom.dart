@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 class BottomSheetCustom extends StatelessWidget {
   final Widget child;
 
-  BottomSheetCustom({
+const  BottomSheetCustom({Key? key,
     required this.child,
-  });
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(

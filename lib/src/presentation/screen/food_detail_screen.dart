@@ -171,7 +171,7 @@ class FoodDetailScreen extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(40),
                               ),
                             ),
-                            fixedSize: MaterialStateProperty.all(Size(400, 60)),
+                            fixedSize: MaterialStateProperty.all(const Size(400, 60)),
                           ),
                           child: const Text(
                             "Add to cart",
@@ -205,7 +205,7 @@ class FoodDetailScreen extends StatelessWidget {
                   ),
                   options: CarouselOptions(
                     onPageChanged: (index, reason) {
-                      print(index);
+                    
                       context
                           .read<FoodBloc>()
                           .add(ChangeActiveIndexGallery(food, index));

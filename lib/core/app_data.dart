@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import '../src/data/model/bottom_navigation_item.dart';
 
-import 'app_icon.dart';
-
 class AppData {
   const AppData._();
 

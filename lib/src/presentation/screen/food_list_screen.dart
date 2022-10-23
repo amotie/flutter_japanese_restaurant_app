@@ -9,7 +9,6 @@ import 'package:flutter_japanese_restaurant_app/src/presentation/widget/bottom_s
 import '../../business_logic/blocs/food/food_bloc.dart';
 import '../../business_logic/blocs/theme/theme_bloc.dart';
 import '../widget/food_list_view.dart';
-import 'package:badges/badges.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -83,7 +82,7 @@ class FoodListScreen extends StatelessWidget {
             isDismissible: true,
             backgroundColor: Colors.transparent,
             builder: (context) => BottomSheetCustom(
-              child: Container(
+              child: SizedBox(
                 height: MediaQuery.of(context).size.height * .6,
                 child: Padding(
                   padding: const EdgeInsets.all(40),
@@ -114,7 +113,7 @@ class FoodListScreen extends StatelessWidget {
                                 ),
                               ),
                               fixedSize:
-                                  MaterialStateProperty.all(Size(400, 80)),
+                                  MaterialStateProperty.all(const Size(400, 80)),
                             ),
                             child: const Padding(
                               padding: EdgeInsets.all(20),
@@ -139,7 +138,7 @@ class FoodListScreen extends StatelessWidget {
                                   isDismissible: true,
                                   backgroundColor: Colors.transparent,
                                   builder: (context) => BottomSheetCustom(
-                                        child: Container(
+                                        child: SizedBox(
                                           height: 200,
                                           child: Row(
                                               mainAxisAlignment:
@@ -158,7 +157,7 @@ class FoodListScreen extends StatelessWidget {
                                                     ),
                                                     fixedSize:
                                                         MaterialStateProperty
-                                                            .all(Size(400, 80)),
+                                                            .all(const Size(400, 80)),
                                                   ),
                                                   child: const Padding(
                                                     padding: EdgeInsets.all(20),
@@ -183,7 +182,7 @@ class FoodListScreen extends StatelessWidget {
                                                     ),
                                                     fixedSize:
                                                         MaterialStateProperty
-                                                            .all(Size(400, 80)),
+                                                            .all(const Size(400, 80)),
                                                   ),
                                                   child: const Padding(
                                                     padding: EdgeInsets.all(20),
@@ -206,7 +205,7 @@ class FoodListScreen extends StatelessWidget {
                                 ),
                               ),
                               fixedSize:
-                                  MaterialStateProperty.all(Size(400, 80)),
+                                  MaterialStateProperty.all(const Size(400, 80)),
                             ),
                             child: const Padding(
                               padding: EdgeInsets.all(20),
