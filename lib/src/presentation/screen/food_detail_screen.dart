@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_japanese_restaurant_app/core/app_extension.dart';
 
 import 'package:flutter_japanese_restaurant_app/src/data/model/food.dart';
+import 'package:flutter_japanese_restaurant_app/src/presentation/widget/special_request.dart';
 
 import '../../../core/app_color.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -155,7 +156,37 @@ class FoodDetailScreen extends StatelessWidget {
                             fontSize: 20,
                           ),
                     ).fadeAnimation(0.8),
-                    const SizedBox(height: 120),
+                    const SizedBox(height: 20),
+                    SizedBox(
+                      width: 400,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          const Icon(
+                            Icons.message_rounded,
+                          ),
+                          Text("Any Special Request?",
+                                  style: Theme.of(context).textTheme.headline2)
+                              .fadeAnimation(0.8),
+                          TextButton(
+                            onPressed: () {
+                              showModalBottomSheet(
+                                context: context,
+                                builder: (context) => const SpecialRequest(),
+                              );
+                            },
+                            child: Text(
+                              "Add Note",
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .headline2
+                                  ?.copyWith(color: LightThemeColor.accent),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: 20),
                     Center(
                       // width: double.infinity,
                       // height: 45,
@@ -171,7 +202,8 @@ class FoodDetailScreen extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(40),
                               ),
                             ),
-                            fixedSize: MaterialStateProperty.all(const Size(400, 60)),
+                            fixedSize:
+                                MaterialStateProperty.all(const Size(400, 60)),
                           ),
                           child: const Text(
                             "Add to cart",
@@ -205,7 +237,6 @@ class FoodDetailScreen extends StatelessWidget {
                   ),
                   options: CarouselOptions(
                     onPageChanged: (index, reason) {
-                    
                       context
                           .read<FoodBloc>()
                           .add(ChangeActiveIndexGallery(food, index));
