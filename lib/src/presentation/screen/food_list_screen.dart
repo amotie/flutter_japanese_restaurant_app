@@ -112,8 +112,8 @@ class FoodListScreen extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(40),
                                 ),
                               ),
-                              fixedSize:
-                                  MaterialStateProperty.all(const Size(400, 80)),
+                              fixedSize: MaterialStateProperty.all(
+                                  const Size(400, 80)),
                             ),
                             child: const Padding(
                               padding: EdgeInsets.all(20),
@@ -157,7 +157,8 @@ class FoodListScreen extends StatelessWidget {
                                                     ),
                                                     fixedSize:
                                                         MaterialStateProperty
-                                                            .all(const Size(400, 80)),
+                                                            .all(const Size(
+                                                                400, 80)),
                                                   ),
                                                   child: const Padding(
                                                     padding: EdgeInsets.all(20),
@@ -182,7 +183,8 @@ class FoodListScreen extends StatelessWidget {
                                                     ),
                                                     fixedSize:
                                                         MaterialStateProperty
-                                                            .all(const Size(400, 80)),
+                                                            .all(const Size(
+                                                                400, 80)),
                                                   ),
                                                   child: const Padding(
                                                     padding: EdgeInsets.all(20),
@@ -204,8 +206,8 @@ class FoodListScreen extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(40),
                                 ),
                               ),
-                              fixedSize:
-                                  MaterialStateProperty.all(const Size(400, 80)),
+                              fixedSize: MaterialStateProperty.all(
+                                  const Size(400, 80)),
                             ),
                             child: const Padding(
                               padding: EdgeInsets.all(20),
