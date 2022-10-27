@@ -3,6 +3,7 @@ import 'package:flutter_japanese_restaurant_app/core/app_color.dart';
 import 'package:flutter_japanese_restaurant_app/core/app_extension.dart';
 import 'package:flutter_japanese_restaurant_app/src/business_logic/blocs/food/food_bloc.dart';
 import 'package:flutter_japanese_restaurant_app/src/business_logic/blocs/theme/theme_bloc.dart';
+import 'package:flutter_japanese_restaurant_app/src/presentation/screen/prepare_food_screen.dart';
 import '../../../core/app_style.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../../data/model/food.dart';
@@ -188,7 +189,14 @@ class CartScreen extends StatelessWidget {
                           padding:
                               EdgeInsets.symmetric(horizontal: width * 0.1),
                           child: ElevatedButton(
-                              onPressed: () {}, child: const Text("Checkout"))),
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const PrepareFoodScreen()));
+                              },
+                              child: const Text("Checkout"))),
                     )
                   ],
                 ),

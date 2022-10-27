@@ -47,47 +47,56 @@ class AppThemes {
         subtitle1: subtitleLight,
       ),
       iconTheme: const IconThemeData(color: Colors.black45),
+      progressIndicatorTheme: const ProgressIndicatorThemeData(
+        color: Colors.black,
+        linearTrackColor: Colors.black12,
+      ),
     ),
     AppTheme.darkTheme: ThemeData(
-        canvasColor: DarkThemeColor.primaryDark,
-        scaffoldBackgroundColor: DarkThemeColor.primaryDark,
-        floatingActionButtonTheme: const FloatingActionButtonThemeData(
-            backgroundColor: LightThemeColor.accent),
-        appBarTheme: const AppBarTheme(
-            backgroundColor: Colors.transparent,
-            elevation: 0,
-            toolbarTextStyle: TextStyle(color: Colors.white),
-            centerTitle: true,
-            iconTheme: IconThemeData(color: Colors.white),
-            titleTextStyle: h2Style),
-        elevatedButtonTheme: ElevatedButtonThemeData(
-            style: ButtonStyle(
-          backgroundColor:
-              MaterialStateProperty.all<Color>(LightThemeColor.accent),
-        )),
-        hintColor: Colors.white60,
-        inputDecorationTheme: InputDecorationTheme(
-          enabledBorder: textFieldStyle,
-          focusedBorder: textFieldStyle,
-          filled: true,
-          contentPadding: const EdgeInsets.all(20),
-          fillColor: DarkThemeColor.primaryLight,
-        ),
-        bottomAppBarColor: DarkThemeColor.primaryLight,
-        bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-            type: BottomNavigationBarType.fixed,
-            backgroundColor: DarkThemeColor.primaryLight,
-            selectedItemColor: LightThemeColor.accent,
-            unselectedItemColor: Colors.white70),
-        textTheme: TextTheme(
-          headline1: h1Style.copyWith(color: Colors.white),
-          headline2: h2Style.copyWith(color: Colors.white),
-          headline3: h3Style.copyWith(color: Colors.white),
-          headline4: h4StyleLight.copyWith(color: Colors.white),
-          headline5: h5StyleLight.copyWith(color: Colors.white),
-          bodyText1: bodyTextLight.copyWith(color: Colors.white),
-          subtitle1: subtitleLight.copyWith(color: Colors.white60),
-        ),
-        iconTheme: const IconThemeData(color: Colors.white))
+      canvasColor: DarkThemeColor.primaryDark,
+      scaffoldBackgroundColor: DarkThemeColor.primaryDark,
+      floatingActionButtonTheme: const FloatingActionButtonThemeData(
+          backgroundColor: LightThemeColor.accent),
+      appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          toolbarTextStyle: TextStyle(color: Colors.white),
+          centerTitle: true,
+          iconTheme: IconThemeData(color: Colors.white),
+          titleTextStyle: h2Style),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ButtonStyle(
+        backgroundColor:
+            MaterialStateProperty.all<Color>(LightThemeColor.accent),
+      )),
+      hintColor: Colors.white60,
+      inputDecorationTheme: InputDecorationTheme(
+        enabledBorder: textFieldStyle,
+        focusedBorder: textFieldStyle,
+        filled: true,
+        contentPadding: const EdgeInsets.all(20),
+        fillColor: DarkThemeColor.primaryLight,
+      ),
+      bottomAppBarColor: DarkThemeColor.primaryLight,
+      bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+          type: BottomNavigationBarType.fixed,
+          backgroundColor: DarkThemeColor.primaryLight,
+          selectedItemColor: LightThemeColor.accent,
+          unselectedItemColor: Colors.white70),
+      textTheme: TextTheme(
+        headline1: h1Style.copyWith(color: Colors.white),
+        headline2: h2Style.copyWith(color: Colors.white),
+        headline3: h3Style.copyWith(color: Colors.white),
+        headline4: h4StyleLight.copyWith(color: Colors.white),
+        headline5: h5StyleLight.copyWith(color: Colors.white),
+        bodyText1: bodyTextLight.copyWith(color: Colors.white),
+        subtitle1: subtitleLight.copyWith(color: Colors.white60),
+      ),
+      iconTheme: const IconThemeData(color: Colors.white),
+      progressIndicatorTheme: const ProgressIndicatorThemeData(
+        color: Colors.white,
+        linearTrackColor: Colors.black12,
+      ),
+    )
   };
 }

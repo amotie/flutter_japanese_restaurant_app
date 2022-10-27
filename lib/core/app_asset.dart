@@ -17,4 +17,5 @@ class AppAsset {
   static const githubImage = "assets/images/github_pic.png";
   static const emptyCart = "assets/images/empty_cart.png";
   static const emptyFavorite = "assets/images/empty_favorite.png";
+  static const foodPrepraration = "assets/images/Food Prepration.png";
 }
