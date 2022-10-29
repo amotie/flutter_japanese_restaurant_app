@@ -61,6 +61,9 @@ dev_dependencies:
 
 
 
+
+
+
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
@@ -74,7 +77,44 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/
+    - assets/images/Dessert/Bananaspringrollswithicecream/
+    - assets/images/Dessert/Cheesecake/
+    - assets/images/Dessert/CrèmeBrûlée/
+    - assets/images/Dessert/Icecream/
+    - assets/images/Extras/Avocado/
+    - assets/images/Extras/Cheddarsauce/
+    - assets/images/Extras/Sesamesauce/
+    - assets/images/Extras/Sriracha/
+    - assets/images/Extras/SteamedRice/
+    - assets/images/Extras/wasabi/
+    - assets/images/Hosomaki/Hosocaviar/
+    - assets/images/Hosomaki/Hososalmon/
+    - assets/images/Hosomaki/Hososhrimp/
+    - assets/images/Hosomaki/Hosotuna/
+    - assets/images/Nigiri/crab/
+    - assets/images/Nigiri/salmon/
+    - assets/images/Nigiri/shrimp/
+    - assets/images/Nigiri/tuna/
+    - assets/images/Uramaki/Uracrab/
+    - assets/images/Uramaki/Urasalmon/
+    - assets/images/Uramaki/Urashrimp/
+    - assets/images/appetizers/Shrimpkunafa/
+    - assets/images/appetizers/Tempuramoirawasa4p/
+    - assets/images/appetizers/yakitori/
+    - assets/images/noodles/Beefnoodles/
+    - assets/images/noodles/Chickennoodles/
+    - assets/images/noodles/Shrimpnoodles/
+    - assets/images/salad/Edamamesalad/
+    - assets/images/salad/Seaweedsalad/
+    - assets/images/salad/Shrimpcrabsalad/
+    - assets/images/sashimi/Salamon/
+    - assets/images/sashimi/Whitefish/
+    - assets/images/sashimi/tuna/
+    - assets/images/soup/Misosoup/
+    - assets/images/soup/Shifudo/
+    - assets/images/soup/Tomyum/
+
+
     #   - images/a_dot_ham.jpeg
 
     # An image asset can refer to one or more resolution-specific "variants", see
@@ -102,3 +142,4 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+

@@ -234,8 +234,10 @@ class FoodDetailScreen extends StatelessWidget {
                       Image.asset(
                     food.gallery[itemIndex],
                     scale: 2,
+                    fit: BoxFit.cover,
                   ),
                   options: CarouselOptions(
+                    height: 400,
                     onPageChanged: (index, reason) {
                       context
                           .read<FoodBloc>()
@@ -245,7 +247,7 @@ class FoodDetailScreen extends StatelessWidget {
                 ),
                 Positioned(
                   bottom: 10,
-                  right: 0,
+                  right: 10,
                   left: 0,
                   child: Padding(
                     padding: const EdgeInsets.all(8),
