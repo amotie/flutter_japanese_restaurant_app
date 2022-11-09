@@ -9,7 +9,7 @@ class AppThemes {
 
   static final appThemeData = {
     AppTheme.lightTheme: ThemeData(
-      scaffoldBackgroundColor: LightThemeColor.primaryLight,
+      scaffoldBackgroundColor: LightThemeColor.backGroundLight,
       floatingActionButtonTheme: const FloatingActionButtonThemeData(
           backgroundColor: LightThemeColor.accent),
       appBarTheme: const AppBarTheme(
@@ -46,17 +46,17 @@ class AppThemes {
         bodyText1: bodyTextLight,
         subtitle1: subtitleLight,
       ),
-      iconTheme: const IconThemeData(color: Colors.black45),
+      iconTheme: const IconThemeData(color: LightThemeColor.iconsColorLight),
       progressIndicatorTheme: const ProgressIndicatorThemeData(
         color: Colors.black,
         linearTrackColor: Colors.black12,
       ),
     ),
     AppTheme.darkTheme: ThemeData(
-      canvasColor: DarkThemeColor.primaryDark,
-      scaffoldBackgroundColor: DarkThemeColor.primaryDark,
+      canvasColor: DarkThemeColor.backGroundDark,
+      scaffoldBackgroundColor: DarkThemeColor.backGroundDark,
       floatingActionButtonTheme: const FloatingActionButtonThemeData(
-          backgroundColor: LightThemeColor.accent),
+          backgroundColor: DarkThemeColor.primaryDark),
       appBarTheme: const AppBarTheme(
           backgroundColor: Colors.transparent,
           elevation: 0,
@@ -75,13 +75,13 @@ class AppThemes {
         focusedBorder: textFieldStyle,
         filled: true,
         contentPadding: const EdgeInsets.all(20),
-        fillColor: DarkThemeColor.primaryLight,
+        fillColor: DarkThemeColor.backGroundDark,
       ),
-      bottomAppBarColor: DarkThemeColor.primaryLight,
+      bottomAppBarColor: DarkThemeColor.primaryDark,
       bottomNavigationBarTheme: const BottomNavigationBarThemeData(
           type: BottomNavigationBarType.fixed,
-          backgroundColor: DarkThemeColor.primaryLight,
-          selectedItemColor: LightThemeColor.accent,
+          backgroundColor: DarkThemeColor.backGroundDark,
+          selectedItemColor: LightThemeColor.backGroundLight,
           unselectedItemColor: Colors.white70),
       textTheme: TextTheme(
         headline1: h1Style.copyWith(color: Colors.white),
@@ -92,7 +92,7 @@ class AppThemes {
         bodyText1: bodyTextLight.copyWith(color: Colors.white),
         subtitle1: subtitleLight.copyWith(color: Colors.white60),
       ),
-      iconTheme: const IconThemeData(color: Colors.white),
+      iconTheme: const IconThemeData(color: LightThemeColor.iconsColorLight),
       progressIndicatorTheme: const ProgressIndicatorThemeData(
         color: Colors.white,
         linearTrackColor: Colors.black12,

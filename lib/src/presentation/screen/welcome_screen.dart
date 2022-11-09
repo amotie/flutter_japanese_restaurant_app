@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_japanese_restaurant_app/core/app_asset.dart';
 import 'package:flutter_japanese_restaurant_app/src/presentation/screen/home_screen.dart';
@@ -36,12 +37,13 @@ class WelcomeScreen extends StatelessWidget {
                           ),
                       textAlign: TextAlign.center,
                     ),
-                    Text(
+                    AutoSizeText(
                       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                       style: Theme.of(context).textTheme.subtitle1?.copyWith(
                             fontSize: 25,
                             height: 1.2,
                           ),
+                      maxLines: 10,
                       textAlign: TextAlign.center,
                     ),
                   ],

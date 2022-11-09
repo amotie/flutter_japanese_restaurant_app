@@ -76,7 +76,7 @@ class FoodDetailScreen extends StatelessWidget {
             decoration: BoxDecoration(
               color: context.read<ThemeBloc>().isLightTheme
                   ? Colors.white
-                  : DarkThemeColor.primaryLight,
+                  : DarkThemeColor.backGroundDark,
               borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(30),
                 topRight: Radius.circular(30),

@@ -42,7 +42,7 @@ class FoodListView extends StatelessWidget {
               decoration: BoxDecoration(
                   color: context.read<ThemeBloc>().isLightTheme
                       ? Colors.white
-                      : DarkThemeColor.primaryLight,
+                      : DarkThemeColor.backGroundDark,
                   borderRadius: const BorderRadius.all(Radius.circular(20))),
               child: Padding(
                 padding: const EdgeInsets.all(10),

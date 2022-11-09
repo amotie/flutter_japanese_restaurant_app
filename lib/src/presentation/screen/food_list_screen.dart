@@ -45,14 +45,16 @@ class FoodListScreen extends StatelessWidget {
     );
   }
 
-  Widget _searchBar() {
-    return const Padding(
-      padding: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+  Widget _searchBar(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
       child: TextField(
         decoration: InputDecoration(
           hintText: 'Search food',
-          prefixIcon: Icon(Icons.search, color: Colors.grey),
-          contentPadding: EdgeInsets.all(20),
+          prefixIcon: const Icon(Icons.search, color: Colors.grey),
+          contentPadding: const EdgeInsets.all(20),
+          filled: true,
+          fillColor: Theme.of(context).scaffoldBackgroundColor,
         ),
       ),
     );
@@ -243,7 +245,7 @@ class FoodListScreen extends StatelessWidget {
               Text("What do you want to eat \ntoday",
                       style: Theme.of(context).textTheme.headline1)
                   .fadeAnimation(0.4),
-              _searchBar(),
+              _searchBar(context),
               Text("Available for you",
                   style: Theme.of(context).textTheme.headline3),
               Padding(
