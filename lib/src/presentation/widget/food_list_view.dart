@@ -23,7 +23,7 @@ class FoodListView extends StatelessWidget {
       child: ListView.separated(
         padding: const EdgeInsets.only(top: 20, left: 10),
         scrollDirection: Axis.horizontal,
-        itemCount: isReversedList ? 3 : foods.length,
+        itemCount: isReversedList ? 8 : foods.length,
         itemBuilder: (_, index) {
           Food food =
               isReversedList ? foods.reversed.toList()[index] : foods[index];

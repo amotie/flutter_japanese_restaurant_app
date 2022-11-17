@@ -96,133 +96,133 @@ class FoodListScreen extends StatelessWidget {
                         height: 200,
                       ),
                       Text(
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                         style: Theme.of(context).textTheme.subtitle1?.copyWith(
                               fontSize: 25,
                               height: 1.2,
                             ),
                         textAlign: TextAlign.center,
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          ElevatedButton(
-                            onPressed: () {},
-                            style: ButtonStyle(
-                              shape: MaterialStateProperty.all(
-                                RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(40),
-                                ),
-                              ),
-                              fixedSize: MaterialStateProperty.all(
-                                  const Size(400, 80)),
-                            ),
-                            child: const Padding(
-                              padding: EdgeInsets.all(20),
-                              child: Text(
-                                'Need Help',
-                                style: TextStyle(
-                                  fontSize: 30,
-                                ),
-                              ),
-                            ),
-                          ),
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.pop(context);
-                              showModalBottomSheet(
-                                  context: context,
-                                  // shape: RoundedRectangleBorder(
-                                  //   borderRadius: BorderRadius.all(Radius.circular(500)),
-                                  // ),
-                                  elevation: 5.0,
-                                  isScrollControlled: true,
-                                  isDismissible: true,
-                                  backgroundColor: Colors.transparent,
-                                  builder: (context) => BottomSheetCustom(
-                                        child: SizedBox(
-                                          height: 200,
-                                          child: Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.spaceAround,
-                                              children: [
-                                                ElevatedButton(
-                                                  onPressed: () {},
-                                                  style: ButtonStyle(
-                                                    shape: MaterialStateProperty
-                                                        .all(
-                                                      RoundedRectangleBorder(
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(40),
-                                                      ),
-                                                    ),
-                                                    fixedSize:
-                                                        MaterialStateProperty
-                                                            .all(const Size(
-                                                                400, 80)),
-                                                  ),
-                                                  child: const Padding(
-                                                    padding: EdgeInsets.all(20),
-                                                    child: Text(
-                                                      'Pay Cash',
-                                                      style: TextStyle(
-                                                        fontSize: 30,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ),
-                                                ElevatedButton(
-                                                  onPressed: () {},
-                                                  style: ButtonStyle(
-                                                    shape: MaterialStateProperty
-                                                        .all(
-                                                      RoundedRectangleBorder(
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(40),
-                                                      ),
-                                                    ),
-                                                    fixedSize:
-                                                        MaterialStateProperty
-                                                            .all(const Size(
-                                                                400, 80)),
-                                                  ),
-                                                  child: const Padding(
-                                                    padding: EdgeInsets.all(20),
-                                                    child: Text(
-                                                      'Credit Card',
-                                                      style: TextStyle(
-                                                        fontSize: 30,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ),
-                                              ]),
-                                        ),
-                                      ));
-                            },
-                            style: ButtonStyle(
-                              shape: MaterialStateProperty.all(
-                                RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(40),
-                                ),
-                              ),
-                              fixedSize: MaterialStateProperty.all(
-                                  const Size(400, 80)),
-                            ),
-                            child: const Padding(
-                              padding: EdgeInsets.all(20),
-                              child: Text(
-                                'Payment',
-                                style: TextStyle(
-                                  fontSize: 30,
-                                ),
-                              ),
-                            ),
-                          )
-                        ],
-                      )
+                      // Row(
+                      //   mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      //   children: [
+                      //     ElevatedButton(
+                      //       onPressed: () {},
+                      //       style: ButtonStyle(
+                      //         shape: MaterialStateProperty.all(
+                      //           RoundedRectangleBorder(
+                      //             borderRadius: BorderRadius.circular(40),
+                      //           ),
+                      //         ),
+                      //         fixedSize: MaterialStateProperty.all(
+                      //             const Size(400, 80)),
+                      //       ),
+                      //       child: const Padding(
+                      //         padding: EdgeInsets.all(20),
+                      //         child: Text(
+                      //           'Need Help',
+                      //           style: TextStyle(
+                      //             fontSize: 30,
+                      //           ),
+                      //         ),
+                      //       ),
+                      //     ),
+                      //     ElevatedButton(
+                      //       onPressed: () {
+                      //         Navigator.pop(context);
+                      //         showModalBottomSheet(
+                      //             context: context,
+                      //             // shape: RoundedRectangleBorder(
+                      //             //   borderRadius: BorderRadius.all(Radius.circular(500)),
+                      //             // ),
+                      //             elevation: 5.0,
+                      //             isScrollControlled: true,
+                      //             isDismissible: true,
+                      //             backgroundColor: Colors.transparent,
+                      //             builder: (context) => BottomSheetCustom(
+                      //                   child: SizedBox(
+                      //                     height: 200,
+                      //                     child: Row(
+                      //                         mainAxisAlignment:
+                      //                             MainAxisAlignment.spaceAround,
+                      //                         children: [
+                      //                           ElevatedButton(
+                      //                             onPressed: () {},
+                      //                             style: ButtonStyle(
+                      //                               shape: MaterialStateProperty
+                      //                                   .all(
+                      //                                 RoundedRectangleBorder(
+                      //                                   borderRadius:
+                      //                                       BorderRadius
+                      //                                           .circular(40),
+                      //                                 ),
+                      //                               ),
+                      //                               fixedSize:
+                      //                                   MaterialStateProperty
+                      //                                       .all(const Size(
+                      //                                           400, 80)),
+                      //                             ),
+                      //                             child: const Padding(
+                      //                               padding: EdgeInsets.all(20),
+                      //                               child: Text(
+                      //                                 'Pay Cash',
+                      //                                 style: TextStyle(
+                      //                                   fontSize: 30,
+                      //                                 ),
+                      //                               ),
+                      //                             ),
+                      //                           ),
+                      //                           ElevatedButton(
+                      //                             onPressed: () {},
+                      //                             style: ButtonStyle(
+                      //                               shape: MaterialStateProperty
+                      //                                   .all(
+                      //                                 RoundedRectangleBorder(
+                      //                                   borderRadius:
+                      //                                       BorderRadius
+                      //                                           .circular(40),
+                      //                                 ),
+                      //                               ),
+                      //                               fixedSize:
+                      //                                   MaterialStateProperty
+                      //                                       .all(const Size(
+                      //                                           400, 80)),
+                      //                             ),
+                      //                             child: const Padding(
+                      //                               padding: EdgeInsets.all(20),
+                      //                               child: Text(
+                      //                                 'Credit Card',
+                      //                                 style: TextStyle(
+                      //                                   fontSize: 30,
+                      //                                 ),
+                      //                               ),
+                      //                             ),
+                      //                           ),
+                      //                         ]),
+                      //                   ),
+                      //                 ));
+                      //       },
+                      //       style: ButtonStyle(
+                      //         shape: MaterialStateProperty.all(
+                      //           RoundedRectangleBorder(
+                      //             borderRadius: BorderRadius.circular(40),
+                      //           ),
+                      //         ),
+                      //         fixedSize: MaterialStateProperty.all(
+                      //             const Size(400, 80)),
+                      //       ),
+                      //       child: const Padding(
+                      //         padding: EdgeInsets.all(20),
+                      //         child: Text(
+                      //           'Payment',
+                      //           style: TextStyle(
+                      //             fontSize: 30,
+                      //           ),
+                      //         ),
+                      //       ),
+                      //     )
+                      //   ],
+                      // )
                     ],
                   ),
                 ),
@@ -239,9 +239,9 @@ class FoodListScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text("Morning, Sina",
-                      style: Theme.of(context).textTheme.headline5)
-                  .fadeAnimation(0.2),
+              // Text("Morning, David",
+              //         style: Theme.of(context).textTheme.headline5)
+              //     .fadeAnimation(0.2),
               Text("What do you want to eat \ntoday",
                       style: Theme.of(context).textTheme.headline1)
                   .fadeAnimation(0.4),

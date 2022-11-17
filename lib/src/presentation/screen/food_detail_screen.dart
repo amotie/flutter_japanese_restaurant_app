@@ -222,55 +222,55 @@ class FoodDetailScreen extends StatelessWidget {
         ),
       ),
       body: ScaleAnimation(
-        child: Center(
-          child: BlocBuilder<FoodBloc, FoodState>(builder: (context, state) {
-            return Stack(
-              children: [
-                CarouselSlider.builder(
-                  itemCount: state
-                      .foodList[state.foodList.getIndex(food)].gallery.length,
-                  itemBuilder: (BuildContext context, int itemIndex,
-                          int pageViewIndex) =>
-                      Image.asset(
-                    food.gallery[itemIndex],
-                    scale: 2,
-                    fit: BoxFit.cover,
-                  ),
-                  options: CarouselOptions(
-                    height: 400,
-                    onPageChanged: (index, reason) {
-                      context
-                          .read<FoodBloc>()
-                          .add(ChangeActiveIndexGallery(food, index));
-                    },
-                  ),
+        child: BlocBuilder<FoodBloc, FoodState>(builder: (context, state) {
+          return Stack(
+            children: [
+              CarouselSlider.builder(
+                itemCount: state
+                    .foodList[state.foodList.getIndex(food)].gallery.length,
+                itemBuilder:
+                    (BuildContext context, int itemIndex, int pageViewIndex) =>
+                        Image.asset(
+                  food.gallery[itemIndex],
+                  scale: 2,
+                  fit: BoxFit.cover,
+                  width: MediaQuery.of(context).size.height,
                 ),
-                Positioned(
-                  bottom: 10,
-                  right: 10,
-                  left: 0,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8),
-                    child: Center(
-                      child: AnimatedSmoothIndicator(
-                        activeIndex: state
-                            .foodList[state.foodList.getIndex(food)]
-                            .indexOfActiveGallery,
-                        count: state.foodList[state.foodList.getIndex(food)]
-                            .gallery.length,
-                        duration: const Duration(milliseconds: 500),
-                        effect: WormEffect(
-                            activeDotColor: Theme.of(context).primaryColor,
-                            dotWidth: 10.0,
-                            dotHeight: 10.0),
-                      ),
+                options: CarouselOptions(
+                  height: 1000,
+                  viewportFraction: 1,
+                  onPageChanged: (index, reason) {
+                    context
+                        .read<FoodBloc>()
+                        .add(ChangeActiveIndexGallery(food, index));
+                  },
+                  clipBehavior: Clip.none,
+                ),
+              ),
+              Positioned(
+                bottom: 10,
+                right: 10,
+                left: 0,
+                child: Padding(
+                  padding: const EdgeInsets.all(8),
+                  child: Center(
+                    child: AnimatedSmoothIndicator(
+                      activeIndex: state.foodList[state.foodList.getIndex(food)]
+                          .indexOfActiveGallery,
+                      count: state.foodList[state.foodList.getIndex(food)]
+                          .gallery.length,
+                      duration: const Duration(milliseconds: 500),
+                      effect: WormEffect(
+                          activeDotColor: Theme.of(context).primaryColor,
+                          dotWidth: 10.0,
+                          dotHeight: 10.0),
                     ),
                   ),
                 ),
-              ],
-            );
-          }),
-        ),
+              ),
+            ],
+          );
+        }),
       ),
     );
   }

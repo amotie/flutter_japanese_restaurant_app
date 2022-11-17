@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_japanese_restaurant_app/src/presentation/screen/order_lisr.dart';
 import '../../../core/app_data.dart';
 import 'profile_screen.dart';
 import '../animation/page_transition.dart';
@@ -13,8 +14,7 @@ class HomeScreen extends HookWidget {
   final List<Widget> screen = [
     const FoodListScreen(),
     const CartScreen(),
-    const FavoriteScreen(),
-    const ProfileScreen()
+    const OrderList(),
   ];
 
   @override

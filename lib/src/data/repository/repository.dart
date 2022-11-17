@@ -1,4 +1,3 @@
-import '../../../core/app_asset.dart';
 import '../model/food.dart';
 import '../model/food_category.dart';
 
