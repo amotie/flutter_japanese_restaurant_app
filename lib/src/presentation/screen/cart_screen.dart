@@ -63,13 +63,19 @@ class CartScreen extends StatelessWidget {
                 borderRadius: BorderRadius.circular(15),
                 color: context.read<ThemeBloc>().isLightTheme
                     ? Colors.white
-                    : DarkThemeColor.primaryLight,
+                    : Theme.of(context).scaffoldBackgroundColor,
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   const SizedBox(width: 20),
-                  Image.asset(cartFood[index].image, scale: 10),
+                  Image.asset(
+                    cartFood[index].image,
+                    scale: 10,
+                    width: 70,
+                    height: 70,
+                    fit: BoxFit.cover,
+                  ),
                   const SizedBox(width: 20),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -121,6 +127,7 @@ class CartScreen extends StatelessWidget {
 
     Widget _bottomAppBar() {
       return BottomAppBar(
+        color: Theme.of(context).scaffoldBackgroundColor,
         child: SizedBox(
           height: height * 0.32,
           child: Container(

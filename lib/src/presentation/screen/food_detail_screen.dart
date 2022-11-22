@@ -12,6 +12,7 @@ import '../widget/counter_button.dart';
 import '../animation/scale_animation.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:flash/flash.dart';
 
 class FoodDetailScreen extends StatelessWidget {
   const FoodDetailScreen({Key? key, required this.food}) : super(key: key);
@@ -193,9 +194,32 @@ class FoodDetailScreen extends StatelessWidget {
                       child: Padding(
                         padding: EdgeInsets.symmetric(horizontal: width * 0.1),
                         child: ElevatedButton(
-                          onPressed: () => context
-                              .read<FoodBloc>()
-                              .add(AddToCartEvent(food)),
+                          onPressed: () {
+                            context.read<FoodBloc>().add(AddToCartEvent(food));
+                            showFlash(
+                              context: context,
+                              duration: const Duration(seconds: 3),
+                              builder: (context, controller) {
+                                return Flash(
+                                  alignment: Alignment.bottomLeft,
+                                  controller: controller,
+                                  backgroundColor: const Color(0xFF03CEA4),
+                                  boxShadows: kElevationToShadow[4],
+                                  horizontalDismissDirection:
+                                      HorizontalDismissDirection.horizontal,
+                                  child: FlashBar(
+                                    content: Text(
+                                      "Item Added To The Cart",
+                                      style: TextStyle(
+                                        color: Theme.of(context)
+                                            .scaffoldBackgroundColor,
+                                      ),
+                                    ),
+                                  ),
+                                );
+                              },
+                            );
+                          },
                           style: ButtonStyle(
                             shape: MaterialStateProperty.all(
                               RoundedRectangleBorder(

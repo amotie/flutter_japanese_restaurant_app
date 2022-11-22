@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_japanese_restaurant_app/core/app_asset.dart';
+import 'package:lottie/lottie.dart';
 
 class PrepareFoodScreen extends StatefulWidget {
   const PrepareFoodScreen({Key? key}) : super(key: key);
@@ -20,8 +21,8 @@ class _PrepareFoodScreenState extends State<PrepareFoodScreen> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Expanded(
-                  child: Image.asset(
-                    AppAsset.foodPrepraration,
+                  child: Lottie.asset(
+                    "assets/images/sushi-belt.json",
                   ),
                 ),
                 const SizedBox(

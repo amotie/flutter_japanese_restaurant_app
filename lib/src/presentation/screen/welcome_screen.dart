@@ -25,7 +25,7 @@ class WelcomeScreen extends StatelessWidget {
               Expanded(
                 flex: 2,
                 child: Image.asset(
-                  AppAsset.sushi1,
+                  "assets/images/OishiiSushi-Logo-dark1.png",
                 ),
               ),
               Expanded(
@@ -56,29 +56,33 @@ class WelcomeScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        CustomPageRoute(
-                          child: HomeScreen(),
+                  Expanded(
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          CustomPageRoute(
+                            child: HomeScreen(),
+                          ),
+                        );
+                      },
+                      style: ButtonStyle(
+                        shape: MaterialStateProperty.all(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(40),
+                          ),
                         ),
-                      );
-                    },
-                    style: ButtonStyle(
-                      shape: MaterialStateProperty.all(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(40),
-                        ),
+                        fixedSize:
+                            MaterialStateProperty.all(const Size(400, 80)),
                       ),
-                      fixedSize: MaterialStateProperty.all(const Size(400, 80)),
-                    ),
-                    child: const Padding(
-                      padding: EdgeInsets.all(20),
-                      child: Text(
-                        'Lets Start',
-                        style: TextStyle(
-                          fontSize: 30,
+                      child: const Padding(
+                        padding: EdgeInsets.all(20),
+                        child: AutoSizeText(
+                          'Lets Start',
+                          style: TextStyle(
+                            fontSize: 30,
+                          ),
+                          maxLines: 1,
                         ),
                       ),
                     ),
@@ -86,25 +90,29 @@ class WelcomeScreen extends StatelessWidget {
                   const SizedBox(
                     width: 40,
                   ),
-                  ElevatedButton(
-                    onPressed: () {
-                      // MyApp.setLocal(context, const Locale('ar'));
-                    },
-                    style: ButtonStyle(
-                      shape: MaterialStateProperty.all(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(40),
+                  Expanded(
+                    child: ElevatedButton(
+                      onPressed: () {
+                        // MyApp.setLocal(context, const Locale('ar'));
+                      },
+                      style: ButtonStyle(
+                        shape: MaterialStateProperty.all(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(40),
+                          ),
                         ),
+                        fixedSize:
+                            MaterialStateProperty.all(const Size(400, 80)),
                       ),
-                      fixedSize: MaterialStateProperty.all(const Size(400, 80)),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(20),
-                      child: Text(
-                        AppLocalizations.of(context)!
-                            .translate('LANGUAGE_LABEL'),
-                        style: const TextStyle(
-                          fontSize: 30,
+                      child: Padding(
+                        padding: const EdgeInsets.all(20),
+                        child: AutoSizeText(
+                          AppLocalizations.of(context)!
+                              .translate('LANGUAGE_LABEL'),
+                          style: const TextStyle(
+                            fontSize: 30,
+                          ),
+                          maxLines: 1,
                         ),
                       ),
                     ),
